@@ -1,6 +1,14 @@
 package com.company;
 
-public class Course {
+public class Course implements Cloneable{
+    public void setCourseName(String courseName) {
+        this.courseName = courseName;
+    }
+
+    public void setNumberOfStudents(int numberOfStudents) {
+        this.numberOfStudents = numberOfStudents;
+    }
+
     private String courseName;
     private String [] students;
     private int numberOfStudents;
@@ -47,5 +55,16 @@ public class Course {
 
     public int getNumberOfStudents() {
         return numberOfStudents;
+    }
+
+    @Override
+    public Object clone(){
+        try{
+            Course cl = (Course) super.clone();
+            cl.students = students.clone();
+            return cl;
+        } catch (CloneNotSupportedException cloneNotSupportedException){
+            return null;
+        }
     }
 }
