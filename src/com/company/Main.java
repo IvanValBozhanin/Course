@@ -42,11 +42,11 @@ public class Main {
         c2.setCourseName("Informatics");
         System.out.print("Course 1 - " + c1.getCourseName() + ": ");
         for(int i=0;i<c1.getNumberOfStudents(); ++i){
-            System.out.print(c1.getStudents()[i] + " ");
+            System.out.print(c1.getStudents()[i] + ", ");
         }
         System.out.print("\nCourse 2 - " + c2.getCourseName() + ": ");
         for(int i=0;i<c2.getNumberOfStudents(); ++i){
-            System.out.print(c2.getStudents()[i] + " ");
+            System.out.print(c2.getStudents()[i] + ", ");
         }
     }
 
